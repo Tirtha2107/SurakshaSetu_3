@@ -1,0 +1,59 @@
+Year,Level,State,City,Total_Crimes,Rape,Cruelty_By_Husband,Assault_Modesty,Kidnapping_Abduction,Dowry_Deaths,Domestic_Violence
+2021,State,Uttar Pradesh,,56083,2845,21656,12045,14520,2200,
+2021,State,Maharashtra,,39450,2299,14392,9810,9015,1223,
+2021,State,Rajasthan,,40738,6337,9020,10084,12055,365,
+2021,State,Madhya Pradesh,,34389,2947,8764,9437,10362,522,
+2021,State,West Bengal,,35654,1123,19884,6635,6198,493,
+2022,State,Uttar Pradesh,,65843,3690,24258,13415,16342,2330,
+2022,State,Maharashtra,,45415,3100,16218,10970,11601,1250,
+2022,State,Rajasthan,,45058,6399,10245,11521,16220,399,
+2022,State,Madhya Pradesh,,32019,2939,8125,9020,11410,528,
+2022,State,West Bengal,,34738,1034,19512,6422,7281,451,
+2023,State,Uttar Pradesh,,66381,3881,25245,13998,16931,2410,
+2023,State,Maharashtra,,47101,3425,17108,11245,11987,1260,
+2023,State,Rajasthan,,45450,6423,10615,11801,16230,405,
+2023,State,Madhya Pradesh,,32342,2965,8351,9104,11380,542,
+2023,State,West Bengal,,34691,1050,19845,6512,6810,474,
+2021,City,Delhi,Delhi,13554,1250,,5420,,,3980
+2021,City,Maharashtra,Mumbai,5880,510,,2105,,,2310
+2021,City,Karnataka,Bengaluru,4870,495,,1820,,,1760
+2021,City,Rajasthan,Jaipur,3780,815,,1325,,,1120
+2021,City,West Bengal,Kolkata,1746,110,,642,,,735
+2022,City,Delhi,Delhi,14312,1375,,5690,,,4210
+2022,City,Maharashtra,Mumbai,6025,540,,2215,,,2460
+2022,City,Karnataka,Bengaluru,4955,515,,1880,,,1815
+2022,City,Rajasthan,Jaipur,3872,835,,1390,,,1175
+2022,City,West Bengal,Kolkata,1695,105,,628,,,712
+2023,City,Delhi,Delhi,13366,1290,,5412,,,3950
+2023,City,Maharashtra,Mumbai,6025,552,,2198,,,2480
+2023,City,Karnataka,Bengaluru,4870,498,,1856,,,1795
+2023,City,Rajasthan,Jaipur,3872,822,,1365,,,1140
+2023,City,West Bengal,Kolkata,1746,112,,635,,,725
+2023,State,Andaman and Nicobar Islands,,678,,,,,,
+2022,State,Andhra Pradesh,,158547,,,,,,
+2023,State,Arunachal Pradesh,,2308,,,,,,
+2023,State,Assam,,59315,,,,,,
+2021,State,Bihar,,186006,,,,,,
+2022,State,Chandigarh,,2941,,,,,,
+2022,State,Chhattisgarh,,70519,,,,,,
+2022,State,Dadra and Nagar Haveli and Daman and Diu,,1184,,,,,,
+2022,State,Goa,,2711,,,,,,
+2021,State,Gujarat,,381849,,,,,,
+2022,State,Haryana,,125435,,,,,,
+2021,State,Himachal Pradesh,,13041,,,,,,
+2022,State,Jammu and Kashmir,,77.1,,,,,,
+2022,State,Jharkhand,,48726,,,,,,
+2021,State,Kerala,,149099,,,,,,
+2022,State,Ladakh,,439,,,,,,
+2022,State,Lakshadweep,,64,,,,,,
+2022,State,Manipur,,3029,,,,,,
+2022,State,Meghalaya,,2914,,,,,,
+2021,State,Mizoram,,2467,,,,,,
+2021,State,Nagaland,,1033,,,,,,
+2021,State,Odisha,,124956,,,,,,
+2021,State,Puducherry,,3851,,,,,,
+2022,State,Punjab,,43748,,,,,,
+2022,State,Sikkim,,549,,,,,,
+2022,State,Tamil Nadu,,193931,,,,,,
+2022,State,Telangana,,151849,,,,,,
+2021,State, Uttarakhand,,16967,,,,,,
