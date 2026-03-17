@@ -8,5 +8,5 @@ folium
 geopy
 requests
 twilio
-google-generativeai
+google-genai
 openrouteservice
