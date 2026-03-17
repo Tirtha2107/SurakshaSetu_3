@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+streamlit-option-menu
+streamlit-folium
+streamlit-geolocation
+folium
+geopy
+requests
+twilio
+google-generativeai
+openrouteservice
