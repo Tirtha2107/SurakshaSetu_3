@@ -34,7 +34,7 @@ def sos_page():
 
         client = Client(account_sid, auth_token)
 
-        from_number = "+13022615581"
+        from_number = ""
 
         numbers = [
             "+919326940651"
