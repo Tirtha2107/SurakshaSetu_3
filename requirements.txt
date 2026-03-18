@@ -10,4 +10,8 @@ requests
 twilio
 google-genai
 openrouteservice
+scikit-learn
+matplotlib
+seaborn
+plotly
 
