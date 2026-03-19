@@ -325,48 +325,47 @@ def chatbot_page():
     question = st.text_input("Ask a question about women's safety:")
 
     if question:
-        st.markdown(f'<div class="user-box"><b>You:</b> {question}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="user-box"><b>You:</b> {question}</div>', unsafe_allow_html=True)
 
-        # 🔍 STRICT FILTER
-        question_lower = question.lower().strip()
+    question_lower = question.lower().strip()
 
-        is_safety_related = any(keyword in question_lower for keyword in safety_keywords)
+    # ✅ STRICT ALLOW ONLY
+    is_safety_related = any(keyword in question_lower for keyword in safety_keywords)
 
-        # 🚨 BLOCK everything not related
-        if not is_safety_related:
-            st.markdown(
-                '<div class="bot-box"><b>Chatbot:</b> ❌ I only answer women safety related questions. Please ask about safety, harassment, emergency, or protection.</div>',
-                unsafe_allow_html=True
-            )
-            st.stop()   # 🔥 THIS LINE STOPS GEMINI COMPLETELY
+    # 🚨 IF NOT SAFETY → STOP EVERYTHING
+    if not is_safety_related:
+        st.markdown(
+            '<div class="bot-box"><b>Chatbot:</b> ❌ I only answer women safety related questions. Please ask about safety, harassment, emergency, or protection.</div>',
+            unsafe_allow_html=True
+        )
+        return   # 🔥 IMPORTANT: Use RETURN instead of st.stop()
 
-        try:
-            # ✅ Strong personalized prompt
-            prompt = f"""
-            You are a Women Safety Assistant.
+    # ✅ ONLY IF SAFE → CALL GEMINI
+    try:
+        prompt = f"""
+        You are a STRICT Women Safety Assistant.
 
-            STRICT RULES:
-            - Only answer women safety related queries
-            - Do NOT answer general questions (celebrities, sports, politics, etc.)
-            - If question is not about safety → refuse
-            - Give practical, simple, and actionable advice
-            - Be supportive and calm
+        RULES:
+        - ONLY answer women safety questions
+        - REFUSE anything unrelated (politics, celebrities, sports, etc.)
+        - Give practical safety advice
+        - Keep answers short and helpful
 
-            User Question: {question}
-            """
+        User Question: {question}
+        """
 
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt
-            )
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
 
-            answer_text = response.text
+        answer_text = response.text
 
-            st.markdown(
-                f'<div class="bot-box"><b>Chatbot:</b> {answer_text}</div>',
-                unsafe_allow_html=True
-            )
+        st.markdown(
+            f'<div class="bot-box"><b>Chatbot:</b> {answer_text}</div>',
+            unsafe_allow_html=True
+        )
 
-        except Exception as e:
-            st.error(f"Error: {e}")
-
+    except Exception as e:
+        st.error(f"Error: {e}")
+    
