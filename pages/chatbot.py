@@ -325,12 +325,12 @@ def chatbot_page():
     question = st.text_input("Ask a question about women's safety:")
 
     if question:
-    st.markdown(f'<div class="user-box"><b>You:</b> {question}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="user-box"><b>You:</b> {question}</div>', unsafe_allow_html=True)
 
-    question_lower = question.lower().strip()
+        question_lower = question.lower().strip()
 
-    # ✅ STRICT ALLOW ONLY
-    is_safety_related = any(keyword in question_lower for keyword in safety_keywords)
+        # ✅ STRICT ALLOW ONLY
+        is_safety_related = any(keyword in question_lower for keyword in safety_keywords)
 
     # 🚨 IF NOT SAFETY → STOP EVERYTHING
     if not is_safety_related:
