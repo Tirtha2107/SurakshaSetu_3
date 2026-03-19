@@ -49,12 +49,7 @@ IMAGE_PATH = os.path.join(BASE_DIR, "girl60.png")
 
 girl_b64 = img_to_base64(IMAGE_PATH)
 
-st.markdown(f"""
-<div style="text-align:center;">
-    <img src="data:image/png;base64,{girl_b64}" 
-         style="width:120px; height:auto; display:block; margin:auto;">
-</div>
-""", unsafe_allow_html=True)
+
 
 # -----------------------------
 # GLOBAL BACKGROUND + HEADER CSS
@@ -178,7 +173,7 @@ def render_home():
 
     st.markdown(f"""
     <div class="top-banner">
-        <div class="title">सुरक्षाSetu</div>
+        <div class="title" style="text-align:center;">सुरक्षाSetu</div>
         <div class="subtitle">Empowering Women Securing Everyone</div>
         <img class="girl-img" src="data:image/png;base64,{girl_b64}">
     </div>
