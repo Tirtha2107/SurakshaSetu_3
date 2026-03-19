@@ -32,11 +32,9 @@ def health_page():
     # -----------------------------
     st.markdown("""
     <style>
-
     .stApp {
         background-color: #FF77B1;
     }
-
     .top-banner {
         width: 100%;
         height: 300px;
@@ -44,7 +42,6 @@ def health_page():
         position: relative;
         padding-left: 40px;
     }
-
     .girl-img {
         position: absolute;
         right: 50px;
@@ -52,97 +49,35 @@ def health_page():
         width: 23vw;
         max-width: 500px;
     }
-
-    /* TITLE (Laptop) */
     .title {
         font-size: 100px;
         font-weight: 900;
         color: white;
+    
     }
+    @media (max-width: 768px) {
 
-    /* SUBTITLE (Laptop) */
+        .title {
+            font-size: 55px;
+            text-align: center;
+        }
+    }
     .subtitle {
         font-size: 30px;
         font-weight: 800;
         color: white;
     }
-
-    /* ---------- MOBILE VERSION ---------- */
-    @media screen and (max-width: 768px) {
-
-        .title {
-            font-size: 55px !important;
-            text-align: center !important;
-        }
-
+                
+    /* MOBILE VERSION */
+    @media (max-width: 768px) {
         .subtitle {
-            font-size: 18px !important;
-            text-align: center !important;
+            font-size: 18px;
+            text-align: center;
         }
-
-        .girl-img {
-            position: relative;
-            right: 0;
-            top: 0;
-            width: 60%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-        }
-
-    }
+    }   
 
     </style>
     """, unsafe_allow_html=True)
-    # st.markdown("""
-    # <style>
-    # .stApp {
-    #     background-color: #FF77B1;
-    # }
-    # .top-banner {
-    #     width: 100%;
-    #     height: 300px;
-    #     background: #FF77B1;
-    #     position: relative;
-    #     padding-left: 40px;
-    # }
-    # .girl-img {
-    #     position: absolute;
-    #     right: 50px;
-    #     top: 10px;
-    #     width: 23vw;
-    #     max-width: 500px;
-    # }
-    # .title {
-    #     font-size: 100px;
-    #     font-weight: 900;
-    #     color: white;
-    
-    # }
-    # @media (max-width: 768px) {
-
-    #     .title {
-    #         font-size: 55px;
-    #         text-align: center;
-    #     }
-    # }
-    # .subtitle {
-    #     font-size: 30px;
-    #     font-weight: 800;
-    #     color: white;
-    # }
-                
-    # /* MOBILE VERSION */
-    # @media (max-width: 768px) {
-    #     .subtitle {
-    #         font-size: 18px;
-    #         text-align: center;
-    #     }
-    # }   
-
-    # </style>
-    # """, unsafe_allow_html=True)
 
     # -----------------------------
     # TOP BANNER
