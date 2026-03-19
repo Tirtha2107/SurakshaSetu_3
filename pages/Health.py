@@ -53,12 +53,27 @@ def health_page():
         font-size: 100px;
         font-weight: 900;
         color: white;
+    
     }
     .subtitle {
         font-size: 30px;
         font-weight: 800;
         color: white;
     }
+                
+    /* MOBILE VERSION */
+    @media (max-width: 768px) {
+
+        .title {
+            font-size: 55px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            text-align: center;
+        }
+
     </style>
     """, unsafe_allow_html=True)
 
