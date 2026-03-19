@@ -178,7 +178,7 @@ def render_home():
     </div>
     """, unsafe_allow_html=True)
 
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4 = st.columns([1,1,1,1], gap="small")
 
     with col1:
         if st.button("\nSafety", use_container_width=True):
