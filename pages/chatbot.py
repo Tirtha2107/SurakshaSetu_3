@@ -262,7 +262,6 @@ def chatbot_page():
     st.markdown(f"""
     <style>
 
-    /* TOP BANNER */
     .top-bannerc {{
         width: 100%;
         height:180px;
@@ -328,47 +327,46 @@ def chatbot_page():
     if question:
         st.markdown(f'<div class="user-box"><b>You:</b> {question}</div>', unsafe_allow_html=True)
 
-        # 🔍 Check relevance
-        question_lower = question.lower()
-        is_relevant = any(keyword in question_lower for keyword in safety_keywords)
+        # 🔍 STRICT FILTER
+        question_lower = question.lower().strip()
 
-        if not is_relevant:
+        is_safety_related = any(keyword in question_lower for keyword in safety_keywords)
+
+        # 🚨 BLOCK everything not related
+        if not is_safety_related:
             st.markdown(
-                '<div class="bot-box"><b>Chatbot:</b> ❌ I can only answer women safety related questions. Please ask about safety, harassment, emergency, or protection.</div>',
+                '<div class="bot-box"><b>Chatbot:</b> ❌ I only answer women safety related questions. Please ask about safety, harassment, emergency, or protection.</div>',
                 unsafe_allow_html=True
             )
-        else:
-            try:
-                # ✅ Personalized Women Safety Prompt
-                prompt = f"""
-                You are a caring and supportive Women Safety Assistant.
+            st.stop()   # 🔥 THIS LINE STOPS GEMINI COMPLETELY
 
-                Your role:
-                - Help women stay safe in real-life and online situations
-                - Provide practical, easy-to-follow safety advice
-                - Be supportive, respectful, and calm
-                - Focus ONLY on women safety topics
+        try:
+            # ✅ Strong personalized prompt
+            prompt = f"""
+            You are a Women Safety Assistant.
 
-                Strict Rules:
-                - Do NOT answer general knowledge (like politics, PM, etc.)
-                - If question is unrelated, politely refuse
-                - Give short, clear, and actionable answers
+            STRICT RULES:
+            - Only answer women safety related queries
+            - Do NOT answer general questions (celebrities, sports, politics, etc.)
+            - If question is not about safety → refuse
+            - Give practical, simple, and actionable advice
+            - Be supportive and calm
 
-                User Question: {question}
-                """
+            User Question: {question}
+            """
 
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash",
-                    contents=prompt
-                )
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
 
-                answer_text = response.text
+            answer_text = response.text
 
-                st.markdown(
-                    f'<div class="bot-box"><b>Chatbot:</b> {answer_text}</div>',
-                    unsafe_allow_html=True
-                )
+            st.markdown(
+                f'<div class="bot-box"><b>Chatbot:</b> {answer_text}</div>',
+                unsafe_allow_html=True
+            )
 
-            except Exception as e:
-                st.error(f"Error: {e}")
+        except Exception as e:
+            st.error(f"Error: {e}")
 
