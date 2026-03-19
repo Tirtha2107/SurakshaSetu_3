@@ -77,6 +77,19 @@ st.markdown("""
     max-width: 500px;
 }
 
+            /* MOBILE VERSION */
+@media (max-width: 768px) {
+    .girl-img {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 55%;
+        max-width: 260px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
 
             
 .title {
