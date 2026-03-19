@@ -14,4 +14,4 @@ scikit-learn
 matplotlib
 seaborn
 plotly
-
+reportlab
