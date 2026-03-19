@@ -73,6 +73,7 @@ def health_page():
             font-size: 18px;
             text-align: center;
         }
+    }
 
     </style>
     """, unsafe_allow_html=True)
