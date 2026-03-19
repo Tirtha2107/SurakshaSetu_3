@@ -77,10 +77,21 @@ st.markdown("""
     max-width: 500px;
 }
 
+
+            
 .title {
     font-size: 110px;
     font-weight: 900;
     color: white;
+    text-align: left;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .title {
+        font-size: 60px;
+        text-align: center;
+    }
 }
 
 .subtitle {
@@ -173,7 +184,7 @@ def render_home():
 
     st.markdown(f"""
     <div class="top-banner">
-        <div class="title" style="text-align:center;">सुरक्षाSetu</div>
+        <div class="title">सुरक्षाSetu</div>
         <div class="subtitle">Empowering Women Securing Everyone</div>
         <img class="girl-img" src="data:image/png;base64,{girl_b64}">
     </div>
